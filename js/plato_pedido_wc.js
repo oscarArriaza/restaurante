@@ -10,10 +10,7 @@ document.addEventListener
         super();
         
         // Creamos el shadow DOM
-        if(!this.shadowRoot)
-        {
-          this.attachShadow({mode: 'open'});
-        }
+        let shadow = this.attachShadow({ mode: 'open' });
         
         // Recuperamos los atributos
         let idPlato=this.getAttribute("data-id-plato")||"Id del plato desconocido.";
@@ -21,7 +18,7 @@ document.addEventListener
         let precioPlatoTotal=this.getAttribute("data-precio-plato-total")||'Precio del plato total desconocido.';
         let cantidad=this.getAttribute("data-cantidad-plato")||'Cantidad del plato desconocida.';
 
-    
+        
         // Definimos la template (HTML + CSS)
         let template = document.createElement('template');
         template.innerHTML=

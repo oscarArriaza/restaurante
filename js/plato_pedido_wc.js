@@ -10,7 +10,10 @@ document.addEventListener
         super();
         
         // Creamos el shadow DOM
-        let shadow = this.attachShadow({ mode: 'open' });
+        if(!this.shadowRoot)
+        {
+          this.attachShadow({mode: 'open'});
+        }
         
         // Recuperamos los atributos
         let idPlato=this.getAttribute("data-id-plato")||"Id del plato desconocido.";

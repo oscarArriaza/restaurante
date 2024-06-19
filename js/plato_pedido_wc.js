@@ -43,13 +43,11 @@ document.addEventListener
 
                     // Añadir el event listener para el botón
                     this.shadowRoot.querySelector('.botonAniadir').addEventListener('click', () => {
-                        console.log("Añadir plato");
-                        //this.cambiarCantidad(1);
+                        this.cambiarCantidad(1);
                     });
 
                     this.shadowRoot.querySelector('.botonQuitar').addEventListener('click', () => {
-                        console.log("Quitar plato");
-                        //this.cambiarCantidad(-1);
+                        this.cambiarCantidad(-1);
                     });
                 }
             }

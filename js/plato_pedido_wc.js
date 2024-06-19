@@ -35,13 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // Añadir el event listener para el botón
                 this.shadowRoot.querySelector('.botonAniadir').addEventListener('click', () => {
-                    console.log("boton añadir pulsado");
                     this.cambiarCantidad(1);
-                    
                 });
 
                 this.shadowRoot.querySelector('.botonQuitar').addEventListener('click', () => {
-                    console.log("boton quitar pulsado");
                     this.cambiarCantidad(-1);
                 });
             }
